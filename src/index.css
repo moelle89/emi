@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-beige: #F5F2ED;
+  --color-brand-gold: #D4AF37;
+  --color-brand-skin: #FDF5F2;
+  --color-brand-accent: #E8D5C4;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-beige text-neutral-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Before/After Slider Styles */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: white;
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
